@@ -88,18 +88,46 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      animation: rainbow 3s linear infinite;
+      animation: rainbow 3s linear infinite, slideInLeft 0.8s ease-out both;
       font-weight: 800;
       text-shadow: 0 0 20px rgba(255, 105, 235, 0.5);
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
     
     p.lede { 
       margin: 0 auto 16px; 
       max-width: 600px; 
-      color: var(--muted); 
-      font-size: clamp(14px, 3.5vw, 16px);
-      line-height: 1.5;
+      color: #ffffff; 
+      font-size: clamp(16px, 4vw, 19px);
+      line-height: 1.6;
       padding: 0 8px;
+      font-weight: 500;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 105, 235, 0.6);
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+      padding: 12px 16px;
+      animation: fadeInUp 1s ease-out 0.3s both;
     }
     
     .notice { 
@@ -388,7 +416,7 @@
   </main>
 
   <footer>
-    Compiled for the weekend of 7–8 November 2025. Have a fabulous time! 💃✨
+    Compiled for the weekend of 7–8 November 2025. Have a fabulous time! Voli te bracko! xx 💃✨
   </footer>
 </body>
 </html>
