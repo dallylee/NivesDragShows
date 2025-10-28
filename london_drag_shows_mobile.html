@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Drag Shows in London, 7–8 November 2025</title>
+  <meta name="description" content="Curated list of drag shows and drag brunches in London for Friday 7 November and Saturday 8 November 2025, with images and booking links." />
+  <style>
+    :root {
+      --bg-start: #1a0033;
+      --bg-end: #330066;
+      --card: linear-gradient(135deg, #2d1b4e 0%, #1a0f2e 100%);
+      --text: #ffffff;
+      --muted: #e0b3ff;
+      --accent: #ff69eb;
+      --link: #00ffff;
+      --border: #ff1493;
+      --sparkle: #ffd700;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    @keyframes sparkle {
+      0%, 100% { opacity: 0; transform: scale(0); }
+      50% { opacity: 1; transform: scale(1); }
+    }
+    
+    @keyframes rainbow {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+    
+    html, body { 
+      margin: 0; 
+      padding: 0; 
+      background: linear-gradient(-45deg, #1a0033, #4a0080, #ff1493, #330066);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      color: var(--text); 
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      overflow-x: hidden;
+    }
+    
+    header { 
+      padding: 24px 16px 16px; 
+      text-align: center; 
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: '✨';
+      position: absolute;
+      font-size: 30px;
+      animation: sparkle 2s infinite, float 3s ease-in-out infinite;
+      top: 20px;
+      left: 10%;
+    }
+    
+    header::after {
+      content: '💅';
+      position: absolute;
+      font-size: 30px;
+      animation: sparkle 2s infinite 0.5s, float 3s ease-in-out infinite 0.5s;
+      top: 30px;
+      right: 10%;
+    }
+    
+    h1 { 
+      margin: 0 0 12px; 
+      font-size: clamp(24px, 6vw, 32px);
+      letter-spacing: 0.5px; 
+      background: linear-gradient(90deg, #ff69eb, #00ffff, #ffd700, #ff69eb);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: rainbow 3s linear infinite;
+      font-weight: 800;
+      text-shadow: 0 0 20px rgba(255, 105, 235, 0.5);
+    }
+    
+    p.lede { 
+      margin: 0 auto 16px; 
+      max-width: 600px; 
+      color: var(--muted); 
+      font-size: clamp(14px, 3.5vw, 16px);
+      line-height: 1.5;
+      padding: 0 8px;
+    }
+    
+    .notice { 
+      background: rgba(255, 20, 147, 0.1); 
+      color: var(--muted); 
+      border: 2px solid var(--border); 
+      border-radius: 16px; 
+      padding: 12px 16px; 
+      margin: 16px auto; 
+      max-width: 100%; 
+      font-size: clamp(12px, 3vw, 14px);
+      backdrop-filter: blur(10px);
+    }
+    
+    main { 
+      max-width: 1100px; 
+      margin: 0 auto 32px; 
+      padding: 0 12px; 
+    }
+    
+    .grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); 
+      gap: 16px; 
+    }
+    
+    article { 
+      background: var(--card); 
+      border: 2px solid transparent;
+      border-radius: 20px; 
+      overflow: hidden; 
+      box-shadow: 0 8px 32px rgba(255, 20, 147, 0.3);
+      transition: all 0.3s ease;
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    article:nth-child(2) { animation-delay: 0.5s; }
+    article:nth-child(3) { animation-delay: 1s; }
+    article:nth-child(4) { animation-delay: 1.5s; }
+    article:nth-child(5) { animation-delay: 2s; }
+    
+    article:hover { 
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 12px 48px rgba(255, 105, 235, 0.6);
+      border-color: var(--border);
+    }
+    
+    .media { 
+      aspect-ratio: 16/9; 
+      width: 100%; 
+      object-fit: cover; 
+      background: #0b0b0f; 
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    
+    article:hover .media {
+      transform: scale(1.05);
+    }
+    
+    .body { 
+      padding: 16px; 
+    }
+    
+    h2 { 
+      font-size: clamp(18px, 4vw, 20px);
+      margin: 0 0 6px; 
+      line-height: 1.3;
+    }
+    
+    h3 { 
+      font-size: clamp(14px, 3.5vw, 16px);
+      margin: 0 0 10px; 
+      color: var(--accent); 
+      font-weight: 600;
+    }
+    
+    .meta { 
+      list-style: none; 
+      padding: 0; 
+      margin: 0 0 10px; 
+      font-size: clamp(12px, 3vw, 14px);
+      color: var(--muted); 
+    }
+    
+    .meta li { 
+      margin: 4px 0; 
+      line-height: 1.4;
+    }
+    
+    .links { 
+      font-size: clamp(12px, 3vw, 14px);
+      line-height: 1.6;
+    }
+    
+    .links a, h2 a { 
+      color: var(--link); 
+      text-decoration: none; 
+      border-bottom: 1px dotted var(--link);
+      transition: all 0.2s ease;
+    }
+    
+    .links a:hover, h2 a:hover { 
+      color: var(--sparkle);
+      border-bottom-color: var(--sparkle);
+      text-shadow: 0 0 8px var(--sparkle);
+    }
+    
+    .tags { 
+      display: flex; 
+      gap: 6px; 
+      flex-wrap: wrap; 
+      margin: 12px 0 0; 
+    }
+    
+    .tag { 
+      font-size: clamp(11px, 2.5vw, 12px);
+      background: linear-gradient(135deg, #ff1493, #ff69eb);
+      border: none;
+      color: white; 
+      padding: 6px 12px; 
+      border-radius: 999px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(255, 20, 147, 0.4);
+    }
+    
+    footer { 
+      text-align: center; 
+      color: var(--muted); 
+      font-size: clamp(11px, 2.5vw, 12px);
+      padding: 20px 16px; 
+      border-top: 2px solid rgba(255, 20, 147, 0.3);
+      margin-top: 24px;
+    }
+    
+    /* Mobile optimizations */
+    @media (max-width: 640px) {
+      header { padding: 20px 12px 12px; }
+      h1 { margin-bottom: 10px; }
+      p.lede { margin-bottom: 12px; }
+      .grid { gap: 12px; }
+      article { border-radius: 16px; }
+      .body { padding: 14px; }
+      .notice { margin: 12px; padding: 10px 12px; }
+      main { padding: 0 8px; }
+    }
+    
+    /* Enhance touch targets on mobile */
+    @media (hover: none) {
+      .links a, h2 a { 
+        padding: 4px 2px;
+        display: inline-block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Drag Shows in London, 7–8 Nov 2025</h1>
+    <p class="lede">Hi Nives! 🌟 Ready for your first drag show? Get ready for glitter, glamour, and non-stop fun! Enjoy the sparkle! ✨💖</p>
+  </header>
+
+  <main>
+    <section class="grid">
+      <!-- 1. Queen of Hoxton -->
+      <article>
+        <img class="media" src="https://queenofhoxton.com/wp-content/uploads/2024/05/%40benedictpriddy_QOH-RooftopLaunch_May24-06594.jpg" alt="Queen of Hoxton rooftop photograph" />
+        <div class="body">
+          <h2><a href="https://queenofhoxton.com/whats-on/" target="_blank" rel="noopener">Queen of Hoxton, Shoreditch</a></h2>
+          <h3>The Next Drag Superstar! Final</h3>
+          <ul class="meta">
+            <li><strong>Date:</strong> Friday 7 November 2025</li>
+            <li><strong>Location:</strong> 1 Curtain Road, London EC2A 3JX</li>
+            <li><strong>Format:</strong> Competition final, evening show</li>
+          </ul>
+          <p class="links">
+            Booking link, Eventbrite: 
+            <a href="https://www.eventbrite.co.uk/e/the-next-drag-superstar-tickets-1707778123339" target="_blank" rel="noopener">eventbrite.co.uk</a>
+            , Alternate listing: 
+            <a href="https://dice.fm/event/8exwrv-the-next-drag-superstar-7th-nov-queen-of-hoxton-london-tickets?lng=en-US" target="_blank" rel="noopener">DICE</a>
+            , Venue site: 
+            <a href="https://queenofhoxton.com/" target="_blank" rel="noopener">queenofhoxton.com</a>
+            , <a href="https://tfl.gov.uk/plan-a-journey/results?from=N22%206EY&to=1%20Curtain%20Road%2C%20London%20EC2A%203JX" target="_blank" rel="noopener">How to get there</a>
+          </p>
+          <div class="tags">
+            <span class="tag">Friday</span><span class="tag">Evening</span><span class="tag">Shoreditch</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2. Fire London / Vauxhall Food And Beer Garden -->
+      <article>
+        <img class="media" src="https://skiddle.imgix.net/c/4/a/1964011_79815433_Bougie-Drag-Bottomless-Brunch_1024.jpg?auto=format,compress&height=292&width=auto" alt="Bougie Drag Bottomless Brunch promotional image" />
+        <div class="body">
+          <h2><a href="https://www.eventbrite.co.uk/e/bougie-drag-bottomless-brunch-dinner-london-tickets-453849364667" target="_blank" rel="noopener">Fire London / Vauxhall Food And Beer Garden</a></h2>
+          <h3>Bougie Drag Bottomless Brunch</h3>
+          <ul class="meta">
+            <li><strong>Date:</strong> Saturday 8 November 2025</li>
+            <li><strong>Typical time:</strong> 12:00 to 16:00</li>
+            <li><strong>Address:</strong> 6A South Lambeth Place, London SW8 1SP</li>
+          </ul>
+          <p class="links">
+            Tickets and details: 
+            <a href="https://www.skiddle.com/whats-on/London/Fire-London--%2F-Vauxhall-Food-And-Beer-Garden/Bougie-Drag-Bottomless-Brunch/40807019/" target="_blank" rel="noopener">skiddle.com</a>
+            , <a href="https://tfl.gov.uk/plan-a-journey/results?from=N22%206EY&to=6A%20South%20Lambeth%20Place%2C%20London%20SW8%201SP" target="_blank" rel="noopener">How to get there</a>
+          </p>
+          <div class="tags">
+            <span class="tag">Saturday</span><span class="tag">Daytime</span><span class="tag">Vauxhall</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. Royal Vauxhall Tavern -->
+      <article>
+        <img class="media" src="https://www.vauxhalltavern.com/wp-content/uploads/2025/08/art-of-drag-oct-lrg-1.webp" alt="Royal Vauxhall Tavern cabaret crowd" />
+        <div class="body">
+          <h2><a href="https://www.vauxhalltavern.com/events/event/sunday-cabaret-with-billie-gold-and-karla-bear/?oid=6188" target="_blank" rel="noopener">Royal Vauxhall Tavern, Kennington Lane</a></h2>
+          <h3>Late-night drag club events</h3>
+          <ul class="meta">
+            <li><strong>Friday 7 November:</strong> VauxAll Too Well, 21:30 to 03:00</li>
+            <li><strong>Saturday 8 November:</strong> DILF London, 22:00 to 04:00</li>
+            <li><strong>Address:</strong> 372 Kennington Lane, London SE11 5HY</li>
+          </ul>
+          <p class="links">
+            What's on and tickets: 
+            <a href="https://www.vauxhalltavern.com/whats-on/" target="_blank" rel="noopener">vauxhalltavern.com</a>
+            , <a href="https://tfl.gov.uk/plan-a-journey/results?from=N22%206EY&to=372%20Kennington%20Lane%2C%20London%20SE11%205HY" target="_blank" rel="noopener">How to get there</a>
+          </p>
+          <div class="tags">
+            <span class="tag">Friday</span><span class="tag">Saturday</span><span class="tag">Late night</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. Dalston Superstore -->
+      <article>
+        <img class="media" src="https://dalstonsuperstore.com/wp-content/uploads/2024/09/12.png" alt="Dalston Superstore drag brunch collage" />
+        <div class="body">
+          <h2><a href="https://dalstonsuperstore.com/event/bonk-pastys-big-old-brunch-49/" target="_blank" rel="noopener">Dalston Superstore, East London</a></h2>
+          <h3>Weekend Drag Brunch</h3>
+          <ul class="meta">
+            <li><strong>Date:</strong> Saturday 8 November and Sunday 9 November 2025</li>
+            <li><strong>Typical time:</strong> 12:00 to 17:00</li>
+            <li><strong>Address:</strong> 117 Kingsland High Street, London E8 2PB</li>
+          </ul>
+          <p class="links">
+            Brunch info and bookings: 
+            <a href="https://dalstonsuperstore.com/drag-brunch/" target="_blank" rel="noopener">dalstonsuperstore.com</a>
+            , <a href="https://tfl.gov.uk/plan-a-journey/results?from=Moselle%20Avenue%2C%20London%20N22%206EY%2C%20UK&to=Dalston%20Superstore%2C%20Kingsland%20High%20Street%2C%20London%2C%20UK" target="_blank" rel="noopener">How to get there</a>
+          </p>
+          <div class="tags">
+            <span class="tag">Saturday</span><span class="tag">Sunday</span><span class="tag">Daytime</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5. Balls Brothers Austin Friars / Ginger's Big Drag Bottomless Brunch -->
+      <article>
+        <img class="media" src="https://bottomlessbrunch.com/wp-content/uploads/2020/09/F6345814-9FA8-4EC0-A844-D9879B8A9A04.jpeg" alt="Ginger's Big Drag Bottomless Brunch promotional image" />
+        <div class="body">
+          <h2><a href="https://bottomlessbrunch.com/restaurant/london/east-london/ballsbrothers/" target="_blank" rel="noopener">Balls Brothers Austin Friars, The City</a></h2>
+          <h3>Ginger's Big Drag Bottomless Brunch</h3>
+          <ul class="meta">
+            <li><strong>Date:</strong> Saturday 8 November 2025</li>
+            <li><strong>Address:</strong> 10–11 Austin Friars, London EC2N 2HG</li>
+          </ul>
+          <p class="links">
+            Listing and tickets: 
+            <a href="https://www.designmynight.com/london/whats-on/daytime/gingers-big-drag-bottomless-brunch" target="_blank" rel="noopener">designmynight.com</a>
+            , <a href="https://tfl.gov.uk/plan-a-journey/results?from=N22%206EY&to=10%E2%80%9311%20Austin%20Friars%2C%20London%20EC2N%202HG" target="_blank" rel="noopener">How to get there</a>
+          </p>
+          <div class="tags">
+            <span class="tag">Saturday</span><span class="tag">Daytime</span><span class="tag">City</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section style="margin-top: 20px;">
+      <div class="notice">
+        ⚠️ Always check the ticket page for final times, age policy and any changes. Doors and running times may vary on the day.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Compiled for the weekend of 7–8 November 2025. Have a fabulous time! 💃✨
+  </footer>
+</body>
+</html>
